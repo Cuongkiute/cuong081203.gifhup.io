@@ -1,0 +1,262 @@
+@charset "utf-8";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    grid-area: header;
+}
+
+.menu {
+    grid-area: menu;
+}
+
+.content {
+    grid-area: content;
+}
+
+.right {
+    grid-area: right;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+.main {
+    display: grid;
+    grid-template-areas:
+        'header header  header '
+        'menu content right '
+        'footer footer footer ';
+    gap: 10px;
+    padding: 10px;
+    grid-template-columns: 200px 840px;
+}
+
+.main div {}
+
+.header {
+    padding: 20px 0;
+    position: relative;
+    background-color: rgb(71, 204, 89);
+    width: 100%;
+    height: 100px;
+}
+
+.header .text {
+    position: absolute;
+    width: 400px;
+    height: auto;
+}
+
+.h3 {
+    margin-top: 10px;
+    margin-left: 20px;
+    color: red;
+    font-size: 20px;
+}
+
+.animation {
+    animation-name: example;
+    animation-duration: 4s;
+}
+
+@keyframes example {
+    0% {
+        background-color: red;
+    }
+
+    25% {
+        background-color: yellow;
+    }
+
+    50% {
+        background-color: blue;
+    }
+
+    100% {
+        background-color: green;
+    }
+}
+
+.header .text h3 {
+    margin-top: 10px;
+    margin-left: 20px;
+    color: red;
+    font-size: 20px;
+    text-shadow: 0 0 5px aqua;
+}
+
+.header .text p {
+    margin-left: 20px;
+    color: red;
+    text-shadow: 0 0 4px rebeccapurple;
+}
+
+.header .main1 {
+    float: right;
+    width: 150px;
+    height: 60px;
+    background-color: white;
+    box-shadow: 0 0 5px orange;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    margin-right: 20px;
+    text-align: center;
+}
+
+.header .main1 h1 {
+    font-size: 30px;
+    text-shadow: 0 0 5px red, 0 0 10px rebeccapurple, 0 0 15px greenyellow;
+}
+
+.header .main1 p {
+    font-size: 12px;
+    text-shadow: 0 0 3px red, 0 0 5px aqua;
+}
+
+.menu {
+    width: 200px;
+    background-color: #aaa;
+}
+
+.menu li {
+    background-color: #aaa;
+    position: relative;
+    border-bottom: 1px solid #fff;
+    width: 200px;
+    height: 40px;
+}
+
+.menu li a {
+    font-size: 20px;
+    text-decoration: none;
+    line-height: 40px;
+    padding-left: 10px;
+    color: #fff;
+}
+
+.menu li:hover {
+    background-color: orange;
+    display: block;
+    z-index: 1;
+}
+
+.menu .menu1 {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    left: 200px;
+    top: 0;
+    list-style-type: none;
+    box-shadow: 0 0 5px rebeccapurple;
+}
+
+.menu li:hover .menu1 {
+    display: block;
+    background-color: orange;
+    z-index: 1;
+}
+
+.content {
+    border: 3px solid #ccc;
+    box-shadow: 0 0 3px orange;
+    width: 840px;
+    height: 800px;
+}
+
+.content .group td {
+    width: 280px;
+    height: 400px;
+    box-sizing: border-box;
+}
+
+.content .group img {
+    position: relative;
+    margin-left: 10px;
+    width: 260px;
+    height: 200px;
+}
+
+.group h3 {
+    color: red;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.group p {
+    margin: 0 10px;
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+}
+
+.right {
+    width: 440px;
+    background-color: rgb(70, 138, 240);
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.right h1 {
+    margin: 20px;
+    color: red;
+}
+
+.form label {
+    font-size: 20px;
+}
+
+.form div {
+    float: right;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.form div input {
+    height: 30px;
+    width: 250px;
+}
+
+.form div .inputcomment {
+    height: 70px;
+    width: 250px;
+}
+
+.submit {
+    float: left;
+    margin-right: 210px;
+    border-radius: 4px;
+}
+
+.grid-container {
+    margin-top: 40px;
+    width: 435px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding: 10px;
+}
+
+.grid-item {
+    background-color: rgb(70, 138, 240);
+    border: 1px solid #fff;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    color: #fff;
+}
+
+.footer {
+    height: 70px;
+    background-color: #ccc;
+}
+
+.footer p {
+    text-align: center;
+    font-size: 20px;
+}
